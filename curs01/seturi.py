@@ -8,3 +8,4 @@ setul_2 = {4, 5, 2}
 # print(setul.union(setul_2)) => {1, 2, 5, 'item 1', 4}
 # print(setul.intersection(setul_2)) => {4, 5}
 # print(type(setul))
+
