@@ -1,4 +1,4 @@
-cnp = 1221010170021
+cnp = input("CNP: ")
 if len(str(cnp))!=13:
     print("CNP Invalid")
 
@@ -33,7 +33,35 @@ elif int(ll)>13:
     print("CNP Invalid")
 elif int(zz)>32:
     print("CNP Invalid")
-elif int(jj)>53:
+elif (int(ll)==1 and int(zz)!=31):
+    print("CNP Invalid")
+elif int(ll)==2 and int(zz)!=29 and (int(aa)==00 or int(aa)%4==0 ):
+    print("CNP Invalid")
+elif int(ll)==2 and int(zz)!=28 and (int(aa)!=00 or int(aa)%4!=0 ):
+    print("CNP Invalid")
+elif (int(ll)==3 and int(zz)!=31):
+    print("CNP Invalid")
+elif (int(ll)==4 and int(zz)!=30):
+    print("CNP Invalid")
+elif (int(ll)==5 and int(zz)!=31):
+    print("CNP Invalid")
+elif (int(ll)==6 and int(zz)!=30):
+    print("CNP Invalid")
+elif (int(ll)==7 and int(zz)!=31):
+    print("CNP Invalid")
+elif (int(ll)==8 and int(zz)!=31):
+    print("CNP Invalid")
+elif (int(ll)==9 and int(zz)!=30):
+    print("CNP Invalid")
+elif (int(ll)==10 and int(zz)!=31):
+    print("CNP Invalid")
+elif (int(ll)==11 and int(zz)!=30):
+    print("CNP Invalid")
+elif (int(ll)==12 and int(zz)!=31):
+    print("CNP Invalid")
+elif int(jj) in [47,48,49,50,51] or (int(jj)>53):
+    print("CNP Invalid")
+elif int(nnn)!=000:
     print("CNP Invalid")
 elif c_control%11 == 10 and int(c)!=1:
     print("CNP Invalid -> Pasul C=1 ")

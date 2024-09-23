@@ -2,9 +2,9 @@ person_movies= [{'nume': 'George',
                 'filme': ['Shrek', 'Bond', 'Fight Club']
                  },
                {'nume': 'Cristian',
-                'filme': ['Fight Club', 'The Nun', 'Dracula', 'Bond']},
+                'filme': ['Fight Club', 'The Nun','Bond', 'Dracula', 'Bond']},
                {'nume': 'Stefan',
-                'filme': ['Fight Club', 'Slumdog Milionare']  }
+               'filme': ['Fight Club', 'Slumdog Milionare']  }
                ]
 fav_movie = {}
 top_user = {}
@@ -21,6 +21,9 @@ for i in person_movies:
             fav_movie[f] += 1
         else:
             fav_movie.update({f:1})
+
+print(fav_movie)
+
 film = list(dict(sorted(fav_movie.items(), key=lambda item: item[1], reverse=True)).keys())[0]
 top_movies= ",".join(list((dict(sorted(fav_movie.items(), key=lambda item: item[1], reverse=True)).keys())))
 top_users=",".join(list((dict(sorted(top_user.items(), key=lambda item: item[1], reverse=True)).keys())))
