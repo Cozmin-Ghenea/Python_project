@@ -18,7 +18,11 @@ nnn = "".join(str(x) for x in arr[9:12])
 nnn_control = "".join(str(x) for x in arr_control[9:12])
 c   = "".join(str(x) for x in arr[12:13])
 c_control=0
-
+bisect = None
+if int(aa)==00 or int(aa)%4==0:
+    bisect = True
+else:
+    bisect = False
 for i,v in enumerate(arr):
     if i == len(arr):
         continue
@@ -30,43 +34,41 @@ elif int(s)==7 or int(s)== 8 or int(s) == 9: #cerinta extrem de ciudata
     if aa==100:
         aa="00"
 elif int(ll)>13:
+    print("CNP Invalid ")
+elif (int(ll)==1 and 1<int(zz)>31):
     print("CNP Invalid")
-elif int(zz)>32:
+elif bisect is True and int(ll)==2 and 1<int(zz)>29 :
+    print("CNP Invalid -> aici1")
+elif bisect is False and int(ll)==2 and 1<int(zz)>28 :
+    print("CNP Invalid -> aici2")
+elif (int(ll)==3 and 1<int(zz)>31):
     print("CNP Invalid")
-elif (int(ll)==1 and int(zz)!=31):
+elif (int(ll)==4 and 1<int(zz)>30):
     print("CNP Invalid")
-elif int(ll)==2 and int(zz)!=29 and (int(aa)==00 or int(aa)%4==0 ):
+elif (int(ll)==5 and 1<int(zz)>31):
     print("CNP Invalid")
-elif int(ll)==2 and int(zz)!=28 and (int(aa)!=00 or int(aa)%4!=0 ):
+elif (int(ll)==6 and 1<int(zz)>30):
     print("CNP Invalid")
-elif (int(ll)==3 and int(zz)!=31):
+elif (int(ll)==7 and 1<int(zz)>31):
     print("CNP Invalid")
-elif (int(ll)==4 and int(zz)!=30):
+elif (int(ll)==8 and 1<int(zz)>31):
     print("CNP Invalid")
-elif (int(ll)==5 and int(zz)!=31):
+elif (int(ll)==9 and 1<int(zz)>30):
     print("CNP Invalid")
-elif (int(ll)==6 and int(zz)!=30):
+elif (int(ll)==10 and 1<int(zz)>31):
     print("CNP Invalid")
-elif (int(ll)==7 and int(zz)!=31):
+elif (int(ll)==11 and 1<int(zz)>30):
     print("CNP Invalid")
-elif (int(ll)==8 and int(zz)!=31):
-    print("CNP Invalid")
-elif (int(ll)==9 and int(zz)!=30):
-    print("CNP Invalid")
-elif (int(ll)==10 and int(zz)!=31):
-    print("CNP Invalid")
-elif (int(ll)==11 and int(zz)!=30):
-    print("CNP Invalid")
-elif (int(ll)==12 and int(zz)!=31):
+elif int(ll)==12 and 1<int(zz)>31:
     print("CNP Invalid")
 elif int(jj) in [47,48,49,50,51] or (int(jj)>53):
     print("CNP Invalid")
-elif int(nnn)!=000:
+elif int(nnn)==000:
     print("CNP Invalid")
 elif c_control%11 == 10 and int(c)!=1:
-    print("CNP Invalid -> Pasul C=1 ")
+    print("CNP Invalid")
 elif int(c)!=c_control%11 and c_control%11 != 10:
-    print("CNP Invalid -> Pasul C-2")
+    print("CNP Invalid")
 else:
     print(f"CNP-ul {cnp} este valid")
 
